@@ -225,6 +225,7 @@
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\bfseries\color{niceblue} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\bfseries\color{niceblue} #1}}
+\newcommand*{\headerbarstyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\color{graytext} #1}}
 \newcommand*{\headercvstyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\color{graytext} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{niceblue} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
@@ -277,7 +278,7 @@
 % Usage: \firstname{<firstname>}
 % Usage: \lastname{<lastname>}
 % Usage: \familyname{<familyname>}
-\newcommand*{\name}[3]{\def\@firstname{#1}\def\@lastname{#2}\def\@cvs{#3}}
+\newcommand*{\name}[4]{\def\@firstname{#1}\def\@lastname{#2}\def\@namebar{#3}\def\@cvs{#4}}
 \newcommand*{\firstname}[1]{\def\@firstname{#1}}
 \newcommand*{\lastname}[1]{\def\@lastname{#1}}
 \newcommand*{\familyname}[1]{\def\@lastname{#1}}
@@ -399,6 +400,9 @@
       \@firstname
     } \headerlastnamestyle{
       \@lastname
+    }
+         \headerbarstyle{
+      \@namebar
     }
      \headercvstyle{
       \@cvs
