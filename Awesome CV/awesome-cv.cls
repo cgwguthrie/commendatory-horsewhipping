@@ -24,7 +24,6 @@
 \ProvidesClass{awesome-cv}[2015/12/14 v1.3 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
-
 %-------------------------------------------------------------------------------
 %                Class options
 %
@@ -66,6 +65,9 @@
 \RequirePackage{etoolbox}
 % Needed to change line spacing in specific environment
 \RequirePackage{setspace}
+
+\usepackage{enumitem}
+\setlist{nosep}
 % Needed to manage fonts
 \ifxetex
   \RequirePackage[quiet]{fontspec}
@@ -513,9 +515,13 @@
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{
 \vspace{-2mm}
-  \phantomsection{}
-  \sectionstyle{#1}
-  \color{niceblue}\vhrulefill{0.9pt}
+%\par\addvspace{1.5ex}
+\color{niceblue}\vhrulefill{0.9pt}         %New addition
+%\phantomsection{}
+ \centering
+\sectionstyle{#1}
+\color{niceblue}\vhrulefill{0.9pt}
+\par\nobreak\addvspace{1ex}
 }
 
 % Define a subsection for CV
@@ -613,7 +619,7 @@
 }{
   \end{itemize}
   \end{justify}
-  \vspace{-2mm}
+  \vspace{-4mm}
 }
 
 

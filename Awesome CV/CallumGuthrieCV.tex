@@ -34,7 +34,7 @@
 %     Personal Data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Essentials
-\name{\hspace{6.38mm}Callum}{Guthrie}{~|~}{Curriculum Vitae}
+\name{\hspace{3.92mm}Callum }{Guthrie}{~|~}{Curriculum Vitae}
 \address{20 Gardrum Gardens, Shieldhill, Falkirk, FK1 2TB, Scotland}
 \mobile{(+44) 7708~572~981} 
 %%% Social
@@ -52,7 +52,7 @@
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
   {\today}
-  {Callum Guthrie~~~·~~~Curriculum Vitae}
+  {\href{mailto:callumgwguthrie@gmail.com}{Callum Guthrie}{~~~·~~~Curriculum Vitae}}
   {\thepage}
 
 \begin{document}
@@ -60,9 +60,12 @@
 \makecvheader
 
 %%% Import contents
+%\import{\sectiondir}{objective.tex}
 \import{\sectiondir}{experience.tex}
-\import{\sectiondir}{education.tex}
+\import{\sectiondir}{personal.tex}
+\newpage
 \import{\sectiondir}{tech.tex}
+\import{\sectiondir}{education.tex}
 \import{\sectiondir}{achievments.tex}
 \import{\sectiondir}{interests.tex}
 %\import{\sectiondir}{writing.tex}
